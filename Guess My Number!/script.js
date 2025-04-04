@@ -29,7 +29,7 @@ if the event happens
 // Gaming Logic to restict the vaule between 1 - 20
 const secretNumber = Math.trunc(Math.random() * 20)+ 1;
 let score = 20;
-document.querySelector('.number').textContent = secretNumber;
+
 
 document.querySelector('.check').addEventListener('click', function(){
     /*
@@ -44,6 +44,7 @@ document.querySelector('.check').addEventListener('click', function(){
 
     // when player wins
     }else if (guess === secretNumber) {
+        document.querySelector('.number').textContent = secretNumber;
         document.querySelector('.message').textContent = '🎉 Correct Number!';
         document.querySelector('body').style.backgroundColor =' #60b347';
 
