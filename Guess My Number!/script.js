@@ -30,7 +30,7 @@ if the event happens
 const secretNumber = Math.trunc(Math.random() * 20)+ 1;
 let score = 20;
 
-
+document.querySelector('.number').textContent = secretNumber;
 document.querySelector('.check').addEventListener('click', function(){
     /*
     Store the value into guess variable to
@@ -72,4 +72,15 @@ document.querySelector('.check').addEventListener('click', function(){
              document.querySelector('.score').textContent = 0; 
          }
     }
+    document.querySelector('.again').addEventListener('click', function(){
+    score = 20;
+    document.querySelector('.score').value = score;
+    document.querySelector('.message').textContent = 'Start guessing...'
+    secretNumber = Math.trunc(Math.random() * 20)+ 1;
+    document.querySelector('.number').textContent = '?'
+    document.querySelector('body').style.backgroundColor =' #222';
+    document.querySelector('.number').style.width ='15rem';
+    document.querySelector('.guess').value = ' ';
+    }
+    )
 })
