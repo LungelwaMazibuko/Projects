@@ -15,3 +15,16 @@ console.log(document.querySelector('.guess').value)
 */
 
 // Event listener with button configuration
+const x = function(){
+    console.log
+}
+
+/*
+Code listens/outputs value stored in the '.check' variable from user input
+to console.
+'click' implements the code in the function with the arguement '.guess' only
+if the event happens
+*/
+document.querySelector('.check').addEventListener('click', function(){
+    console.log(document.querySelector('.guess').value)
+})
