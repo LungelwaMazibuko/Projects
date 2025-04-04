@@ -40,7 +40,7 @@ document.querySelector('.check').addEventListener('click', function(){
     if (!guess){ //Boolean Expresseion
         document.querySelector('.message').textContent = '⛔ No number!';
     }else if (guess === secretNumber) {
-        document.querySelector('.message.').textContent = '🎉 Correct Number!';
+        document.querySelector('.message').textContent = '🎉 Correct Number!';
     }else if (guess > secretNumber){
         document.querySelector('.message').textContent = '📈 Too high';
     }else if (guess < secretNumber) {
