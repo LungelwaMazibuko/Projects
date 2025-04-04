@@ -27,10 +27,9 @@ if the event happens
 */
 
 // Gaming Logic to restict the vaule between 1 - 20
-const secretNumber = Math.trunc(Math.random() * 20)+ 1;
+let secretNumber = Math.trunc(Math.random() * 20)+ 1;
 let score = 20;
 
-document.querySelector('.number').textContent = secretNumber;
 document.querySelector('.check').addEventListener('click', function(){
     /*
     Store the value into guess variable to
@@ -74,13 +73,13 @@ document.querySelector('.check').addEventListener('click', function(){
     }
     document.querySelector('.again').addEventListener('click', function(){
     score = 20;
-    document.querySelector('.score').value = score;
-    document.querySelector('.message').textContent = 'Start guessing...'
     secretNumber = Math.trunc(Math.random() * 20)+ 1;
-    document.querySelector('.number').textContent = '?'
+    document.querySelector('.message').textContent = 'Start guessing...';
+    document.querySelector('.score').value = score;
+    document.querySelector('.number').textContent = '?';
+    document.querySelector('.guess').value = '';
     document.querySelector('body').style.backgroundColor =' #222';
     document.querySelector('.number').style.width ='15rem';
-    document.querySelector('.guess').value = ' ';
     }
     )
 })
