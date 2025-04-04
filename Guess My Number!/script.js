@@ -25,6 +25,11 @@ to console.
 'click' implements the code in the function with the arguement '.guess' only
 if the event happens
 */
+
+// Gaming Logic to restict the vaule between 1 - 20
+const number = Math.trunc(Math.random()* 20)+ 1;
+document.querySelector('.number').textContent = number;
+
 document.querySelector('.check').addEventListener('click', function(){
     /*
     Store the value into guess variable to
