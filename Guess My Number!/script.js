@@ -26,5 +26,14 @@ to console.
 if the event happens
 */
 document.querySelector('.check').addEventListener('click', function(){
-    console.log(document.querySelector('.guess').value)
+    /*
+    Store the value into guess variable to
+    */
+    const guess = Number(document.querySelector('.guess').value)
+    console.log(guess, typeof guess);
+
+    if (!guess){ //Boolean Expresseion
+        // Exception error when input if false
+        document.querySelector('.message').textContent = '⛔ No number!';
+    }
 })
