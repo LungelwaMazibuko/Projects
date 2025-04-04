@@ -27,7 +27,8 @@ if the event happens
 */
 
 // Gaming Logic to restict the vaule between 1 - 20
-const secretNumber = Math.trunc(Math.random()* 20)+ 1;
+const secretNumber = Math.trunc(Math.random() * 20)+ 1;
+document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function(){
     /*
@@ -37,7 +38,6 @@ document.querySelector('.check').addEventListener('click', function(){
     console.log(guess, typeof guess);
 
     if (!guess){ //Boolean Expresseion
-        // Exception error when input if false
         document.querySelector('.message').textContent = '⛔ No number!';
     }else if (guess === secretNumber) {
         document.querySelector('.message.').textContent = '🎉 Correct Number!';
@@ -46,6 +46,4 @@ document.querySelector('.check').addEventListener('click', function(){
     }else if (guess < secretNumber) {
         document.querySelector('.message').textContent = '📉 Too Low';
     }
-    
-
 })
