@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Web Developer Survey</title>
+</head>
+<body>
+  <!-- Survey Form Section -->
+  <h1 id="title">Web Developer Survey</h1>
+  <p id="description">This survey helps gather information about your skills, experience, and preferences as a web developer.</p>
+
+  <form id="survey-form">
+    <!-- Name Field -->
+    <label id="name-label" for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <!-- Email Field -->
+    <label id="email-label" for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <!-- Experience Field -->
+    <label id="number-label" for="number">Years of Experience:</label>
+    <input type="number" id="number" name="experience" min="0" max="50" placeholder="Enter years of experience" required>
+
+    <!-- Dropdown Field -->
+    <label for="dropdown">Current Position:</label>
+    <select id="dropdown" name="position" required>
+      <option value="full-time">Full-time Web Developer</option>
+      <option value="part-time">Part-time Web Developer</option>
+      <option value="freelancer">Freelancer</option>
+      <option value="student">Student</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Radio Buttons for Front-End Skills -->
+    <fieldset>
+      <legend>Which front-end technologies do you use regularly?</legend>
+      <input type="radio" id="html" name="frontend" value="html">
+      <label for="html">HTML</label><br>
+      
+      <input type="radio" id="css" name="frontend" value="css">
+      <label for="css">CSS</label><br>
+      
+      <input type="radio" id="js" name="frontend" value="javascript">
+      <label for="js">JavaScript</label><br>
+    </fieldset>
+
+    <!-- Checkboxes for Back-End Skills -->
+    <fieldset>
+      <legend>Which back-end technologies do you use regularly?</legend>
+      <input type="checkbox" id="node" name="backend" value="node">
+      <label for="node">Node.js</label><br>
+
+      <input type="checkbox" id="python" name="backend" value="python">
+      <label for="python">Python/Django</label><br>
+
+      <input type="checkbox" id="ruby" name="backend" value="ruby">
+      <label for="ruby">Ruby on Rails</label><br>
+    </fieldset>
+
+    <!-- Textarea for Favorite Web Development Project -->
+    <label for="project">Favorite Web Development Project:</label><br>
+    <textarea id="project" name="project" rows="4" cols="50" placeholder="Describe your favorite project"></textarea><br>
+
+    <!-- Submit Button -->
+    <input type="submit" id="submit" value="Submit">
+  </form>
+</body>
+</html>
