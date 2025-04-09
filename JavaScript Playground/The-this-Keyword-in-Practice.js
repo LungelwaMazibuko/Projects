@@ -24,3 +24,10 @@ const jonas = {
   },
 };
 jonas.calcAge();
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
