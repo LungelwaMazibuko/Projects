@@ -25,6 +25,7 @@ const addExpr = function (a, b) {
 const addArrow = (a, b) => a + b;
 
 // Example
+console.log(undefined);
 if (!numProducts) deleteShopingCart();
 
 var numProducts = 10;
