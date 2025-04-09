@@ -37,3 +37,9 @@ console.log('Before:', jessica);
 console.log('After:', jessicaCopy);
 
 // Deep Copy/Clone
+const jessicaClone = structuredClone(jessica);
+jessicaClone.family.push('Mary');
+jessicaClone.family.push('John');
+
+console.log('Original:', jessica);
+console.log('Clone:', jessicaClone);
