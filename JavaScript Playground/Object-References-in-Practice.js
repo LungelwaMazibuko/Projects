@@ -26,10 +26,14 @@ const jessica = {
   family: ['Alice', 'Bob'],
 };
 
+// Shallow Copy
 const jessicaCopy = { ...jessica }; // Object.assign({}, jessica);
 jessicaCopy.lastName = 'Davis';
 
 jessicaCopy.family.push('Mary');
 jessicaCopy.family.push('John');
 
-console.log(jessica, jessicaCopy); // { firstName: 'Jessica', lastName: 'Williams', age: 27, family: [ 'Alice', 'Bob' ] }
+console.log('Before:', jessica);
+console.log('After:', jessicaCopy);
+
+// Deep Copy/Clone
