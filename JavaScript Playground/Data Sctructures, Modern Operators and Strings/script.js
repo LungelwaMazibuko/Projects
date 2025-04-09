@@ -30,6 +30,11 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -64,3 +69,8 @@ secondary = temp; // swap values
 console.log(main, secondary); // Pizzeria Italian
 
 [main, secondary] = [secondary, main]; // Destructuring assignment to swap values
+console.log(main, secondary); // Italian Pizzeria
+
+// Receiving 2 return values from a function
+const [starter, mainCourse] = restaurant.order(2, 0); // Destructuring assignment
+console.log(starter, mainCourse); // Garlic Bread Pizza
