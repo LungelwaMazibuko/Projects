@@ -74,3 +74,9 @@ console.log(main, secondary); // Italian Pizzeria
 // Receiving 2 return values from a function
 const [starter, mainCourse] = restaurant.order(2, 0); // Destructuring assignment
 console.log(starter, mainCourse); // Garlic Bread Pizza
+
+const nested = [2, 4, [5, 6]]; // Nested array
+// const [i, , j] = nested; // Destructuring assignment
+const [i, , [j, k]] = nested; // Destructuring assignment to get nested values
+console.log(i, j, k); // 2 5 6
+
