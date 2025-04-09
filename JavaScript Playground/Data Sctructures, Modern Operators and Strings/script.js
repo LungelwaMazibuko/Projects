@@ -55,5 +55,12 @@ const [x, y, z] = arr; // Destructuring assignment
 console.log(x, y, z); // 2 3 4
 console.log(arr); // [2, 3, 4]
 
-const [first, second] = restaurant.categories; // Destructuring assignment
-console.log(first, second); // Italian Pizzeria
+const [main, secondary] = restaurant.categories; // Destructuring assignment
+console.log(main, secondary); // Italian Pizzeria
+
+const temp = main; // temp variable to swap values
+main = secondary; // swap values
+secondary = temp; // swap values
+console.log(main, secondary); // Pizzeria Italian
+
+[main, secondary] = [secondary, main]; // Destructuring assignment to swap values
