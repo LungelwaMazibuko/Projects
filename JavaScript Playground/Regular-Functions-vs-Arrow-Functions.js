@@ -1,7 +1,7 @@
 'use strict';
 
 // Regular Functions vs Arrow Functions
-const jonas = {
+const jonas1 = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
@@ -27,18 +27,16 @@ const jonas = {
     console.log(`Hey ${this.firstName}`);
   },
 };
-jonas.greet();
-jonas.calcAge();
+jonas1.greet();
+jonas1.calcAge();
 
-const addExpr = function (a, b) {
-  console.log(arguments);
+const addExpr1 = function (a, b) {
   return a + b;
 };
-addExpr(2, 5);
-addExpr(2, 5, 8, 12);
+addExpr1(2, 5);
+addExpr1(2, 5, 8, 12);
 
-var addArrow = (a, b) => {
-  console.log(arguments);
+var addArrow1 = (a, b) => {
   return a + b;
 };
-addArrow(2, 5, 8);
+addArrow1(2, 5, 8);

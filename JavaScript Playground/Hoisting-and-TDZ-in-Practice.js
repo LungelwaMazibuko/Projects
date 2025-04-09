@@ -11,7 +11,7 @@ const year = 1991;
 // Functions
 console.log(addDecl(2, 3));
 // console.log(addExpr(2, 3));
-console.log(addArrow);
+
 // console.log(addArrow(2, 3));
 
 function addDecl(a, b) {
