@@ -30,11 +30,11 @@ const jessica = {
 const jessicaCopy = { ...jessica }; // Object.assign({}, jessica);
 jessicaCopy.lastName = 'Davis';
 
-jessicaCopy.family.push('Mary');
-jessicaCopy.family.push('John');
+// jessicaCopy.family.push('Mary');
+// jessicaCopy.family.push('John');
 
-console.log('Before:', jessica);
-console.log('After:', jessicaCopy);
+// console.log('Before:', jessica);
+// console.log('After:', jessicaCopy);
 
 // Deep Copy/Clone
 const jessicaClone = structuredClone(jessica);
