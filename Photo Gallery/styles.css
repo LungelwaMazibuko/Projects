@@ -16,9 +16,12 @@ body {
     color: #fff;
     border-bottom: 4px solid #fdb347
 }
-
+.gallery{
+    display: flex;;
+}
 .gallery img {
     width: 100%;
     max-width: 350px;
     height: 300px;
   }
+
