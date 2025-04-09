@@ -32,7 +32,6 @@ const restaurant = {
 
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-
   },
 
   openingHours: {
@@ -60,16 +59,16 @@ const [x, y, z] = arr; // Destructuring assignment
 console.log(x, y, z); // 2 3 4
 console.log(arr); // [2, 3, 4]
 
-const [main, secondary] = restaurant.categories; // Destructuring assignment
-console.log(main, secondary); // Italian Pizzeria
+// const [main, secondary] = restaurant.categories; // Destructuring assignment
+// console.log(main, secondary); // Italian Pizzeria
 
-const temp = main; // temp variable to swap values
-main = secondary; // swap values
-secondary = temp; // swap values
-console.log(main, secondary); // Pizzeria Italian
+// const temp = main; // temp variable to swap values
+// main = secondary; // swap values
+// secondary = temp; // swap values
+// console.log(main, secondary); // Pizzeria Italian
 
-[main, secondary] = [secondary, main]; // Destructuring assignment to swap values
-console.log(main, secondary); // Italian Pizzeria
+// [main, secondary] = [secondary, main]; // Destructuring assignment to swap values
+// console.log(main, secondary); // Italian Pizzeria
 
 // Receiving 2 return values from a function
 const [starter, mainCourse] = restaurant.order(2, 0); // Destructuring assignment
@@ -80,3 +79,6 @@ const nested = [2, 4, [5, 6]]; // Nested array
 const [i, , [j, k]] = nested; // Destructuring assignment to get nested values
 console.log(i, j, k); // 2 5 6
 
+// Default values
+const [p = 1, q = 1, r = 1] = [8, 9]; // Destructuring assignment
+console.log(p, q, r); // 8 9 1
