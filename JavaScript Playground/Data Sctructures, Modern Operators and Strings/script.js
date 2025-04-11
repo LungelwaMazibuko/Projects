@@ -53,40 +53,40 @@ const restaurant = {
   },
 };
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
 
-// Destructuring assignment
-const { name, openingHours, categories } = restaurant; // Destructuring assignment
-console.log(name, openingHours, categories); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+// // Destructuring assignment
+// const { name, openingHours, categories } = restaurant; // Destructuring assignment
+// console.log(name, openingHours, categories); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant; // Destructuring assignment with renaming
-console.log(restaurantName, hours, tags); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant; // Destructuring assignment with renaming
+// console.log(restaurantName, hours, tags); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
-// Default values
-const { menu = [], starterMenu: starters = [] } = restaurant; // Destructuring assignment with default values
-console.log(menu, starters); // [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+// // Default values
+// const { menu = [], starterMenu: starters = [] } = restaurant; // Destructuring assignment with default values
+// console.log(menu, starters); // [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
-// Mutating variables
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 }; // Object with properties
-({ a, b } = obj); // Destructuring assignment to assign values to variables
-console.log(a, b); // 23 7
+// // Mutating variables
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 }; // Object with properties
+// ({ a, b } = obj); // Destructuring assignment to assign values to variables
+// console.log(a, b); // 23 7
 
-// Nested objects
-const {
-  fri: { open, close },
-} = openingHours; // Destructuring assignment to get nested values
-console.log(open, close); // 11 23
+// // Nested objects
+// const {
+//   fri: { open, close },
+// } = openingHours; // Destructuring assignment to get nested values
+// console.log(open, close); // 11 23
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
