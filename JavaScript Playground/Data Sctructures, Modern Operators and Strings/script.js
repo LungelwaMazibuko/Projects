@@ -29,7 +29,6 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
@@ -50,14 +49,17 @@ const restaurant = {
   },
 };
 
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
+const { name, openingHours, categories } = restaurant; // Destructuring assignment
+console.log(name, openingHours, categories); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
-const [x, y, z] = arr; // Destructuring assignment
-console.log(x, y, z); // 2 3 4
-console.log(arr); // [2, 3, 4]
+// const arr = [2, 3, 4];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// const [x, y, z] = arr; // Destructuring assignment
+// console.log(x, y, z); // 2 3 4
+// console.log(arr); // [2, 3, 4]
 
 // const [main, secondary] = restaurant.categories; // Destructuring assignment
 // console.log(main, secondary); // Italian Pizzeria
@@ -71,14 +73,14 @@ console.log(arr); // [2, 3, 4]
 // console.log(main, secondary); // Italian Pizzeria
 
 // Receiving 2 return values from a function
-const [starter, mainCourse] = restaurant.order(2, 0); // Destructuring assignment
-console.log(starter, mainCourse); // Garlic Bread Pizza
+// const [starter, mainCourse] = restaurant.order(2, 0); // Destructuring assignment
+// console.log(starter, mainCourse); // Garlic Bread Pizza
 
-const nested = [2, 4, [5, 6]]; // Nested array
-// const [i, , j] = nested; // Destructuring assignment
-const [i, , [j, k]] = nested; // Destructuring assignment to get nested values
-console.log(i, j, k); // 2 5 6
+// const nested = [2, 4, [5, 6]]; // Nested array
+// // const [i, , j] = nested; // Destructuring assignment
+// const [i, , [j, k]] = nested; // Destructuring assignment to get nested values
+// console.log(i, j, k); // 2 5 6
 
-// Default values
-const [p = 1, q = 1, r = 1] = [8, 9]; // Destructuring assignment
-console.log(p, q, r); // 8 9 1
+// // Default values
+// const [p = 1, q = 1, r = 1] = [8, 9]; // Destructuring assignment
+// console.log(p, q, r); // 8 9 1
