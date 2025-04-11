@@ -62,6 +62,17 @@ console.log(badNewArr); // [1, 2, 7, 9, 8]
 const newArr = [1, 2, ...arr]; // Spread operator to create a new array
 console.log(newArr); // [1, 2, 7, 8, 9]
 
+const newMenu = [...restaurant.mainMenu, 'Gnocchi']; // Spread operator to create a new array
+console.log(newMenu); // (5) ['Pizza', 'Pasta', 'Risotto', 'Gnocchi']
+
+//Copying an array
+const mainMenuCopy = [...restaurant.mainMenu]; // Spread operator to create a copy of an array
+console.log(mainMenuCopy); // (4) ['Pizza', 'Pasta', 'Risotto']
+
+// Join two arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; // Spread operator to join two arrays
+console.log(menu); // (7) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
+
 // restaurant.orderDelivery({
 //   time: '22:30',
 //   address: 'Via del Sole, 21',
