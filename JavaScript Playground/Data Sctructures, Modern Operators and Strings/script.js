@@ -52,6 +52,13 @@ const restaurant = {
 const { name, openingHours, categories } = restaurant; // Destructuring assignment
 console.log(name, openingHours, categories); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant; // Destructuring assignment with renaming
+console.log(restaurantName, hours, tags); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
