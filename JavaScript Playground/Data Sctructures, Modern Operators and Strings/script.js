@@ -72,6 +72,16 @@ const restaurant2 = {
   owner: 'Giovanni Rossi',
 };
 
+// // Looping Arrays: The for-of Loop
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu]; // Combine mainMenu and starterMenu into one array
+
+// for (const item of menu) console.log(item); // Log each item in the menu
+
+// for (const [i, el] of menu.entries()) {
+//   console.log(`${i + 1}: ${el}`); // Log each item with its index
+// }
+// //console.log([...menu.entries()]); // Log the entries of the menu array
+
 // OR assignment operator (||=)
 // restaurant2.numGuests = restaurant1.numGuests || 10; // Assign numGuests from restaurant1 if it is falsy
 // restaurant1.numGuests = restaurant2.numGuests || 10;
