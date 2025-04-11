@@ -83,16 +83,16 @@ const restaurant2 = {
 // restaurant2.numGuests ||= 10; // Assign 10 if numGuests is falsy
 
 // Nullish assignment operator (??=)
-restaurant1.numGuests ??= 10; // Assign 10 if numGuests is null or undefined
-restaurant2.numGuests ??= 10; // Assign 10 if numGuests is null or undefined
+// restaurant1.numGuests ??= 10; // Assign 10 if numGuests is null or undefined
+// restaurant2.numGuests ??= 10; // Assign 10 if numGuests is null or undefined
 
-restaurant1.owner ??= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is null or undefined
-restaurant2.owner ??= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is null or undefined
-restaurant1.owner &&= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is truthy
-restaurant2.owner &&= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is truthy
+// restaurant1.owner ??= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is null or undefined
+// restaurant2.owner ??= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is null or undefined
+// restaurant1.owner &&= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is truthy
+// restaurant2.owner &&= '<ANONYMOUS>'; // Assign '<ANONYMOUS>' if owner is truthy
 
-console.log(restaurant1); // {name: 'Capri', numGuests: 20}
-console.log(restaurant2); // {name: 'La Piazza', owner: 'Giovanni Rossi', numGuests: 10}
+// console.log(restaurant1); // {name: 'Capri', numGuests: 20}
+// console.log(restaurant2); // {name: 'La Piazza', owner: 'Giovanni Rossi', numGuests: 10}
 
 // // The Nullish Coalescing Operator (??)
 // // restaurant.numGuests = 0; // Number of guests
