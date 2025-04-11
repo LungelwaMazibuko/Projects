@@ -59,48 +59,48 @@ const restaurant = {
   },
 };
 
-// bad way to create a new array
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
-console.log(badNewArr); // [1, 2, 7, 9, 8]
+// // bad way to create a new array
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
+// console.log(badNewArr); // [1, 2, 7, 9, 8]
 
-// good way to create a new array
-const newArr = [1, 2, ...arr]; // Spread operator to create a new array
-console.log(newArr); // [1, 2, 7, 8, 9]
+// // good way to create a new array
+// const newArr = [1, 2, ...arr]; // Spread operator to create a new array
+// console.log(newArr); // [1, 2, 7, 8, 9]
 
-const newMenu = [...restaurant.mainMenu, 'Gnocchi']; // Spread operator to create a new array
-console.log(newMenu); // (5) ['Pizza', 'Pasta', 'Risotto', 'Gnocchi']
+// const newMenu = [...restaurant.mainMenu, 'Gnocchi']; // Spread operator to create a new array
+// console.log(newMenu); // (5) ['Pizza', 'Pasta', 'Risotto', 'Gnocchi']
 
-//Copying an array
-const mainMenuCopy = [...restaurant.mainMenu]; // Spread operator to create a copy of an array
-console.log(mainMenuCopy); // (4) ['Pizza', 'Pasta', 'Risotto']
+// //Copying an array
+// const mainMenuCopy = [...restaurant.mainMenu]; // Spread operator to create a copy of an array
+// console.log(mainMenuCopy); // (4) ['Pizza', 'Pasta', 'Risotto']
 
-// Join two arrays
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; // Spread operator to join two arrays
-console.log(menu); // (7) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
+// // Join two arrays
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; // Spread operator to join two arrays
+// console.log(menu); // (7) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
 
-// Iterables: arrays, strings, maps, sets. Not objects
-const str = 'Jonas'; // String
-const letters = [...str, '', 'S.']; // Spread operator to create an array from a string
-console.log(letters); // (6) ['J', 'o', 'n', 'a', 's', '']
-console.log(...str); // J o n a s
+// // Iterables: arrays, strings, maps, sets. Not objects
+// const str = 'Jonas'; // String
+// const letters = [...str, '', 'S.']; // Spread operator to create an array from a string
+// console.log(letters); // (6) ['J', 'o', 'n', 'a', 's', '']
+// console.log(...str); // J o n a s
 
-const ingredients = [
-  prompt("Let's make pasta! Ingredient 1?"),
-  prompt('Ingredient 2?'),
-  prompt('Ingredient 3?'),
-]; // Prompt user for ingredients
-console.log(ingredients);
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ]; // Prompt user for ingredients
+// console.log(ingredients);
 
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]); // Call orderPasta function with ingredients
-restaurant.orderPasta(...ingredients); // Call orderPasta function with spread operator 
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]); // Call orderPasta function with ingredients
+// restaurant.orderPasta(...ingredients); // Call orderPasta function with spread operator 
  
-// Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' }; // Spread operator to create a new object
-conseole.log(newRestaurant); // {foundedIn: 1998, name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), …}
+// // Objects
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' }; // Spread operator to create a new object
+// conseole.log(newRestaurant); // {foundedIn: 1998, name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), …}
 
-const restaurantCopy = { ...restaurant }; // Spread operator to create a copy of an object
-console.log(restaurantCopy); // {name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), mainMenu: Array(3), …}
+// const restaurantCopy = { ...restaurant }; // Spread operator to create a copy of an object
+// console.log(restaurantCopy); // {name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), mainMenu: Array(3), …}
 
 // restaurant.orderDelivery({
 //   time: '22:30',
