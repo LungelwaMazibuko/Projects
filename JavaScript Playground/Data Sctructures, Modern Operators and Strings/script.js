@@ -53,6 +53,10 @@ const restaurant = {
   },
 };
 
+const arr = [7,8,9];
+const badNewArr = [1,2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
+console.log(badNewArr); // [1, 2, 7, 9, 8]
+
 // restaurant.orderDelivery({
 //   time: '22:30',
 //   address: 'Via del Sole, 21',
