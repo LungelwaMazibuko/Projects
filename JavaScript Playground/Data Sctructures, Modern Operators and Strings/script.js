@@ -62,32 +62,38 @@ const restaurant = {
   },
 };
 
-// Short Circuiting (&& and ||)
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas'); // 'Jonas'
-console.log(true || 0); // true
-console.log(undefined || null); // null
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
 
-restaurant.numGuests = 0;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10; // Ternary operator to set default value
-console.log(guests1); // 10
 
-const guest2 = restaurant.numGuests || 10;
-console.log(guest2); // 23
 
-console.log('--- AND ---'); // AND operator
-console.log(0 && 'Jonas'); // 0
-console.log(7 && 'Jonas'); // 'Jonas'
+// // Short Circuiting (&& and ||)
+// console.log(3 || 'Jonas');
+// console.log('' || 'Jonas'); // 'Jonas'
+// console.log(true || 0); // true
+// console.log(undefined || null); // null
 
-console.log('Hello' && 23 && null && 'Jonas'); // null
-console.log('Hello' && 23 && 'Jonas'); // 'Jonas'
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
 
-// Practical example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('Mushrooms', 'Spinach'); // Call orderPizza function with ingredients
-}
+// restaurant.numGuests = 0;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10; // Ternary operator to set default value
+// console.log(guests1); // 10
+
+// const guest2 = restaurant.numGuests || 10;
+// console.log(guest2); // 23
+
+// console.log('--- AND ---'); // AND operator
+// console.log(0 && 'Jonas'); // 0
+// console.log(7 && 'Jonas'); // 'Jonas'
+
+// console.log('Hello' && 23 && null && 'Jonas'); // null
+// console.log('Hello' && 23 && 'Jonas'); // 'Jonas'
+
+// // Practical example
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('Mushrooms', 'Spinach'); // Call orderPizza function with ingredients
+// }
+
+// restaurant.orderPizza && restaurant.orderPizza('Mushrooms', 'Spinach'); // Call orderPizza function with ingredients
 
 // // SPREAD OPERATOR
 // const arr = [1, 2, ...[3, 4]];
