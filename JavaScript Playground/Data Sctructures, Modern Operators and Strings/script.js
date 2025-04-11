@@ -33,9 +33,11 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
   orderDelivery: function (starterIndex, mainIndex, time, address) {
-    console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`);
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
   },
-    openingHours: {
+  openingHours: {
     thu: {
       open: 12,
       close: 22,
@@ -56,8 +58,9 @@ restaurant.orderDelivery({
   address: 'Via del Sole, 21',
   mainIndex: 2,
   starterIndex: 2,
-}); 
+});
 
+// Destructuring assignment
 const { name, openingHours, categories } = restaurant; // Destructuring assignment
 console.log(name, openingHours, categories); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
