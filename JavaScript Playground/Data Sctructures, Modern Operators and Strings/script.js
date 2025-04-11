@@ -70,6 +70,12 @@ const obj = { a: 23, b: 7, c: 14 }; // Object with properties
 ({ a, b } = obj); // Destructuring assignment to assign values to variables
 console.log(a, b); // 23 7
 
+// Nested objects
+const {
+  fri: { open, close },
+} = openingHours; // Destructuring assignment to get nested values
+console.log(open, close); // 11 23
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
