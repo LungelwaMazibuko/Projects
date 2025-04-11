@@ -62,37 +62,45 @@ const restaurant = {
   },
 };
 
-// SPREAD OPERATOR
-const arr = [1, 2, ...[3, 4]];
 
-//REST OPERATOR
-const [a, b, ...others] = [1, 2, 3, 4, 5]; // Rest operator to collect remaining elements into an array
-console.log(a, b, others); // 1 2 (3) [3, 4, 5]
+console.log( 3 || 'Jonas');
+console.log('' || 'Jonas'); // 'Jonas'
+console.log(true || 0); // true
+console.log(undefined || null); // null
 
-const [pizzz, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-]; // Spread operator to combine two arrays
-console.log(pizzz, risotto, otherFood); // Pizza Risotto (5) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
-//Objects
-const { sat, ...weekdays } = restaurant.openingHours; // Rest operator to collect remaining properties into an object
-console.log(weekdays); // {thu: {…}, fri: {…}}
 
-// Functions
-const add = function (...numbers) {
-  let sum = 0; // Initialize sum variable
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i]; // Add each number to sum
-    console.log(sum);
-  }
-};
-add(2, 3);
-add(5, 6, 7, 2);
-add(8, 2, 5, 3, 2, 1, 4);
+// // SPREAD OPERATOR
+// const arr = [1, 2, ...[3, 4]];
 
-restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach'); // Call orderPizza function with multiple ingredients
-restaurant.orderPizza('Mushrooms'); // Call orderPizza function with one ingredient
+// //REST OPERATOR
+// const [a, b, ...others] = [1, 2, 3, 4, 5]; // Rest operator to collect remaining elements into an array
+// console.log(a, b, others); // 1 2 (3) [3, 4, 5]
+
+// const [pizzz, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ]; // Spread operator to combine two arrays
+// console.log(pizzz, risotto, otherFood); // Pizza Risotto (5) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// //Objects
+// const { sat, ...weekdays } = restaurant.openingHours; // Rest operator to collect remaining properties into an object
+// console.log(weekdays); // {thu: {…}, fri: {…}}
+
+// // Functions
+// const add = function (...numbers) {
+//   let sum = 0; // Initialize sum variable
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i]; // Add each number to sum
+//     console.log(sum);
+//   }
+// };
+// add(2, 3);
+// add(5, 6, 7, 2);
+// add(8, 2, 5, 3, 2, 1, 4);
+
+// restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach'); // Call orderPizza function with multiple ingredients
+// restaurant.orderPizza('Mushrooms'); // Call orderPizza function with one ingredient
 // // bad way to create a new array
 // const arr = [7, 8, 9];
 // const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
