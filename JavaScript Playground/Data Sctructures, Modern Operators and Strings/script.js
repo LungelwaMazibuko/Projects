@@ -64,6 +64,11 @@ const { menu = [], starterMenu: starters = [] } = restaurant; // Destructuring a
 console.log(menu, starters); // [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
 // Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 }; // Object with properties
+({ a, b } = obj); // Destructuring assignment to assign values to variables
+console.log(a, b); // 23 7
 
 // const arr = [2, 3, 4];
 // const a = arr[0];
