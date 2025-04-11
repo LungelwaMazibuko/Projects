@@ -59,6 +59,9 @@ const {
 } = restaurant; // Destructuring assignment with renaming
 console.log(restaurantName, hours, tags); // Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
 
+const { menu = [], starterMenu: starters = [] } = restaurant; // Destructuring assignment with default values
+console.log(menu, starters); // [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
