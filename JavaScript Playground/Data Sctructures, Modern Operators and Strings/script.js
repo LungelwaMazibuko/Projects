@@ -76,12 +76,17 @@ const restaurant2 = {
 if (restaurant.openingHours && restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open); // Check if openingHours and mon exist
 }
+
+
 // console.log(restaurant.openingHours.mon?.open); // Optional chaining to check if mon exists
+//WITH optional chaining
+// if (restaurant.openingHours.mon) {
+//   console.log(restaurant.openingHours.mon?.open); // Check if openingHours and mon exist
+//   console.log(restaurant.openingHours?.mon?.open); // Check if openingHours and mon exist
 
 // // Looping Arrays: The for-of Loop
 // const menu = [...restaurant.mainMenu, ...restaurant.starterMenu]; // Combine mainMenu and starterMenu into one array
 // for (const item of menu) console.log(item); // Log each item in the menu
-
 // for (const [i, el] of menu.entries()) {
 //   console.log(`${i + 1}: ${el}`); // Log each item with its index
 // }
