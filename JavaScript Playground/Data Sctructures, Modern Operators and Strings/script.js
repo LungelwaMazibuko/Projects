@@ -62,9 +62,13 @@ const restaurant = {
   },
 };
 
+// restaurant.numGuests = 0; // Number of guests
+const guests = restaurant.numGuests || 10; // Default value if numGuests is falsy
+console.log(guests); // 10
 
-
-
+// Nullish: null and undefined (NOT 0 or '')
+const guestCorrrect = restaurant.numGuests ?? 10;
+console.log(guestCorrrect); // 10
 
 // // Short Circuiting (&& and ||)
 // console.log(3 || 'Jonas');
