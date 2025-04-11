@@ -62,13 +62,20 @@ const restaurant = {
   },
 };
 
-
+// Short Circuiting (&& and ||)
 console.log( 3 || 'Jonas');
 console.log('' || 'Jonas'); // 'Jonas'
 console.log(true || 0); // true
 console.log(undefined || null); // null
 
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);  // 'Hello'
 
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10; // Ternary operator to set default value
+console.log(guests1); // 10
+
+ const guest2 = restaurant.numGuests || 10;
+ console.log(guest2); // 23
 
 // // SPREAD OPERATOR
 // const arr = [1, 2, ...[3, 4]];
