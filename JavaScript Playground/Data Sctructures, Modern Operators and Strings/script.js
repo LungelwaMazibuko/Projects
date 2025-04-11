@@ -72,13 +72,14 @@ const restaurant2 = {
   owner: 'Giovanni Rossi',
 };
 
+
+
 //  Optional Chaining (?.)
 if (restaurant.openingHours && restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open); // Check if openingHours and mon exist
 }
-
-
 // console.log(restaurant.openingHours.mon?.open); // Optional chaining to check if mon exists
+
 //WITH optional chaining
 // if (restaurant.openingHours.mon) {
 //   console.log(restaurant.openingHours.mon?.open); // Check if openingHours and mon exist
