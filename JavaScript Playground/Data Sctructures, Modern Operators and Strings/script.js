@@ -73,6 +73,12 @@ console.log(mainMenuCopy); // (4) ['Pizza', 'Pasta', 'Risotto']
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu]; // Spread operator to join two arrays
 console.log(menu); // (7) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad', 'Pizza', 'Pasta', 'Risotto']
 
+// Iterables: arrays, strings, maps, sets. Not objects
+const str = 'Jonas'; // String
+const letters = [...str, '', 'S.']; // Spread operator to create an array from a string
+console.log(letters); // (6) ['J', 'o', 'n', 'a', 's', '']
+console.log(...str); // J o n a s
+
 // restaurant.orderDelivery({
 //   time: '22:30',
 //   address: 'Via del Sole, 21',
