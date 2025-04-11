@@ -59,6 +59,16 @@ const restaurant = {
   },
 };
 
+// SPREAD OPERATOR
+const arr = [1,2,...[3,4,]];
+
+//REST OPERATOR
+const [a,b,...others] = [1,2,3,4,5]; // Rest operator to collect remaining elements into an array
+console.log(a,b,others); // 1 2 (3) [3, 4, 5]
+
+const [pizzz, ,risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu]; // Spread operator to combine two arrays
+console.log(pizzz, risotto, otherFood); // Pizza Risotto (5) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
 // // bad way to create a new array
 // const arr = [7, 8, 9];
 // const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
