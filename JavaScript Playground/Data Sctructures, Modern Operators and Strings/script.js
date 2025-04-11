@@ -72,7 +72,27 @@ const restaurant2 = {
   owner: 'Giovanni Rossi',
 };
 
+//
+const properties = Object.keys(restaurant.openingHours); // Get keys of openingHours object
+console.log(properties); // (3) ['thu', 'fri', 'sat']
 
+let openStr = `We are open on ${properties.length} days: `; // Log number of open days
+for (const day of properties) {
+  openStr += `${day}, `; // Log each day
+}
+console.log(openStr); // We are open on 3 days: thu, fri, sat,
+
+//Property VALUES
+const values = Object.values(restaurant.openingHours); // Get values of openingHours object
+console.log(values); // (3) [{…}, {…}, {…}]
+
+// Entire object
+const entries = Object.entries(restaurant.openingHours); // Get entries of openingHours object
+console.log(entries); // (3) [['thu', {…}], ['fri', {…}], ['sat', {…}]
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and closse at ${close}`); // Log each entry
+}
 
 //  Optional Chaining (?.)
 if (restaurant.openingHours && restaurant.openingHours.mon) {
