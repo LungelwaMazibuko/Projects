@@ -42,7 +42,10 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
     );
   },
-
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient); // Main ingredient
+    console.log(otherIngredients); // Other ingredients
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -60,15 +63,36 @@ const restaurant = {
 };
 
 // SPREAD OPERATOR
-const arr = [1,2,...[3,4,]];
+const arr = [1, 2, ...[3, 4]];
 
 //REST OPERATOR
-const [a,b,...others] = [1,2,3,4,5]; // Rest operator to collect remaining elements into an array
-console.log(a,b,others); // 1 2 (3) [3, 4, 5]
+const [a, b, ...others] = [1, 2, 3, 4, 5]; // Rest operator to collect remaining elements into an array
+console.log(a, b, others); // 1 2 (3) [3, 4, 5]
 
-const [pizzz, ,risotto, ...otherFood] = [...restaurant.mainMenu, ...restaurant.starterMenu]; // Spread operator to combine two arrays
+const [pizzz, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+]; // Spread operator to combine two arrays
 console.log(pizzz, risotto, otherFood); // Pizza Risotto (5) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
 
+//Objects
+const { sat, ...weekdays } = restaurant.openingHours; // Rest operator to collect remaining properties into an object
+console.log(weekdays); // {thu: {…}, fri: {…}}
+
+// Functions
+const add = function (...numbers) {
+  let sum = 0; // Initialize sum variable
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]; // Add each number to sum
+    console.log(sum);
+  }
+};
+add(2, 3);
+add(5, 6, 7, 2);
+add(8, 2, 5, 3, 2, 1, 4);
+
+restaurant.orderPizza('Mushrooms', 'Onion', 'Olives', 'Spinach'); // Call orderPizza function with multiple ingredients
+restaurant.orderPizza('Mushrooms'); // Call orderPizza function with one ingredient
 // // bad way to create a new array
 // const arr = [7, 8, 9];
 // const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
@@ -103,8 +127,8 @@ console.log(pizzz, risotto, otherFood); // Pizza Risotto (5) ['Focaccia', 'Brus
 // console.log(ingredients);
 
 // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]); // Call orderPasta function with ingredients
-// restaurant.orderPasta(...ingredients); // Call orderPasta function with spread operator 
- 
+// restaurant.orderPasta(...ingredients); // Call orderPasta function with spread operator
+
 // // Objects
 // const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' }; // Spread operator to create a new object
 // conseole.log(newRestaurant); // {foundedIn: 1998, name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), …}
