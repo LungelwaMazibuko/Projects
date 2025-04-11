@@ -37,6 +37,12 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2}, and ${ing3}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -78,6 +84,23 @@ const str = 'Jonas'; // String
 const letters = [...str, '', 'S.']; // Spread operator to create an array from a string
 console.log(letters); // (6) ['J', 'o', 'n', 'a', 's', '']
 console.log(...str); // J o n a s
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+]; // Prompt user for ingredients
+console.log(ingredients);
+
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]); // Call orderPasta function with ingredients
+restaurant.orderPasta(...ingredients); // Call orderPasta function with spread operator 
+ 
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Giuseppe' }; // Spread operator to create a new object
+conseole.log(newRestaurant); // {foundedIn: 1998, name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), …}
+
+const restaurantCopy = { ...restaurant }; // Spread operator to create a copy of an object
+console.log(restaurantCopy); // {name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), mainMenu: Array(3), …}
 
 // restaurant.orderDelivery({
 //   time: '22:30',
