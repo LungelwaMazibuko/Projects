@@ -53,11 +53,12 @@ const restaurant = {
   },
 };
 
-
+// bad way to create a new array
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[2], arr[1]]; // Bad way to create a new array
 console.log(badNewArr); // [1, 2, 7, 9, 8]
 
+// good way to create a new array
 const newArr = [1, 2, ...arr]; // Spread operator to create a new array
 console.log(newArr); // [1, 2, 7, 8, 9]
 
