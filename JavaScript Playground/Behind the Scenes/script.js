@@ -1,30 +1,63 @@
 'use strict';
 
-// Scooping in Practice
+///////////////////////////////////////
+// Scoping in Practice
+
+/*
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
+
+  function printAge() {
+    let output = `${firstName}, you are ${age}, born in ${birthYear}`;
+    console.log(output);
+
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      var millenial = true;
+      // Creating NEW variable with same name as outer scope's variable
+      const firstName = 'Steven';
+
+      // Reasssigning outer scope's variable
+      output = 'NEW OUTPUT!';
+
+      const str = `Oh, and you're a millenial, ${firstName}`;
+      console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
+    }
+    // console.log(str);
+    console.log(millenial);
+    // console.log(add(2, 3));
+    console.log(output);
+  }
+  printAge();
+
   return age;
-}
-function printAge() {
-  const output = `You are ${age}, born in ${birthYear}`;
-  console.log(output);
 }
 
 const firstName = 'Jonas';
 calcAge(1991);
-console.log(printAge);
+// console.log(age);
+// printAge();
 
+
+///////////////////////////////////////
 // Hoisting and TDZ in Practice
+
+// Variables
 console.log(me);
-//console.log(job);
-//console.log(year);
+// console.log(job);
+// console.log(year);
 
 var me = 'Jonas';
 let job = 'teacher';
 const year = 1991;
 
 // Functions
+console.log(addDecl(2, 3));
 // console.log(addExpr(2, 3));
+console.log(addArrow);
 // console.log(addArrow(2, 3));
 
 function addDecl(a, b) {
@@ -35,15 +68,15 @@ const addExpr = function (a, b) {
   return a + b;
 };
 
-const addArrow = (a, b) => a + b;
+var addArrow = (a, b) => a + b;
 
 // Example
 console.log(undefined);
-if (!numProducts) deleteShopingCart();
+if (!numProducts) deleteShoppingCart();
 
 var numProducts = 10;
 
-function deleteShopingCart() {
+function deleteShoppingCart() {
   console.log('All products deleted!');
 }
 
@@ -55,26 +88,21 @@ console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
 
-// The this keyword in regular functions
-// 'this' keyword in JavaScript
-// 1. In global scope, 'this' refers to the global object (window in browsers)
-// 2. In a function, 'this' refers to the global object (window in browsers)
-// 3. In a method, 'this' refers to the object that calls the method
-// 4. In an event, 'this' refers to the element that triggered the event
-// 5. In a constructor function, 'this' refers to the new object being created
-// 6. In an arrow function, 'this' refers to the lexical scope (the surrounding context)
-calcAge = function (birthYear) {
+
+///////////////////////////////////////
+// The this Keyword in Practice
+console.log(this);
+
+const calcAge = function (birthYear) {
   console.log(2037 - birthYear);
   console.log(this);
 };
-
 calcAge(1991);
 
 const calcAgeArrow = birthYear => {
   console.log(2037 - birthYear);
   console.log(this);
 };
-
 calcAgeArrow(1980);
 
 const jonas = {
@@ -94,19 +122,23 @@ matilda.calcAge = jonas.calcAge;
 matilda.calcAge();
 
 const f = jonas.calcAge;
-f(); // undefined
+f();
 
-// Regular Functions vs Arrow Functions
-const jonas1 = {
+
+///////////////////////////////////////
+// Regular Functions vs. Arrow Functions
+// var firstName = 'Matilda';
+
+const jonas = {
   firstName: 'Jonas',
   year: 1991,
   calcAge: function () {
-    console.log(this);
+    // console.log(this);
     console.log(2037 - this.year);
 
     // Solution 1
     // const self = this; // self or that
-    // const isMillenial = self => {
+    // const isMillenial = function () {
     //   console.log(self);
     //   console.log(self.year >= 1981 && self.year <= 1996);
     // };
@@ -118,31 +150,39 @@ const jonas1 = {
     };
     isMillenial();
   },
+
   greet: () => {
     console.log(this);
     console.log(`Hey ${this.firstName}`);
   },
 };
-jonas1.greet();
-jonas1.calcAge();
+jonas.greet();
+jonas.calcAge();
 
-const addExpr1 = function (a, b) {
+// arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
   return a + b;
 };
-addExpr1(2, 5);
-addExpr1(2, 5, 8, 12);
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
 
-var addArrow1 = (a, b) => {
+var addArrow = (a, b) => {
+  console.log(arguments);
   return a + b;
 };
-addArrow1(2, 5, 8);
+addArrow(2, 5, 8);
 
-// Object References in Practice
+
+///////////////////////////////////////
+// Object References in Practice (Shallow vs. Deep Copies)
+
 const jessica1 = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
 };
+
 function marryPerson(originalPerson, newLastName) {
   originalPerson.lastName = newLastName;
   return originalPerson;
@@ -150,7 +190,7 @@ function marryPerson(originalPerson, newLastName) {
 
 const marriedJessica = marryPerson(jessica1, 'Davis');
 
-// const marriedJessica = jessica;
+// const marriedJessica = jessica1;
 // marriedJessica.lastName = 'Davis';
 
 console.log('Before:', jessica1);
@@ -160,23 +200,24 @@ const jessica = {
   firstName: 'Jessica',
   lastName: 'Williams',
   age: 27,
-  family: ['Alice', 'Bob'],
+  familiy: ['Alice', 'Bob'],
 };
 
-// Shallow Copy
-const jessicaCopy = { ...jessica }; // Object.assign({}, jessica);
+// Shallow copy
+const jessicaCopy = { ...jessica };
 jessicaCopy.lastName = 'Davis';
 
-// jessicaCopy.family.push('Mary');
-// jessicaCopy.family.push('John');
+// jessicaCopy.familiy.push('Mary');
+// jessicaCopy.familiy.push('John');
 
 // console.log('Before:', jessica);
 // console.log('After:', jessicaCopy);
 
-// Deep Copy/Clone
+// Deep copy/clone
 const jessicaClone = structuredClone(jessica);
-jessicaClone.family.push('Mary');
-jessicaClone.family.push('John');
+jessicaClone.familiy.push('Mary');
+jessicaClone.familiy.push('John');
 
 console.log('Original:', jessica);
 console.log('Clone:', jessicaClone);
+*/
