@@ -105,3 +105,5 @@ const letters = arr.concat(arr2);
 console.log(letters); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 'f']
 console.log([...arr,...arr2]); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 'f']
 
+// JOIN
+console.log(letters.join(' - ')); // 'a - b - c - d - e - j - i - h - g - f'
