@@ -121,7 +121,7 @@ console.log(arr.slice(-1)[0]); // 64
 console.log(arr.at(-1)); // 64
 
 */
-
+/*
 // Looping Arrays: forEach, forOf 
 for (const [i, movement] of movements.entries()) {
   if (movement > 0) {
@@ -138,4 +138,16 @@ movements.forEach(function (mov, i, arr) {
   } else {
     console.log(`Movement ${i+1}: You withdrew ${Math.abs(mov)}`);
   }
+});
+*/
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+
+// Set
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique); // Set(3) {'USD', 'GBP', 'EUR'}
+currenciesUnique.forEach(function (value, _, map) {
+  console.log(`${key}: ${value}`);
 });
