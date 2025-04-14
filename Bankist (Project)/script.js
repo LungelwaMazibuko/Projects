@@ -286,4 +286,8 @@ console.log(accounts);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account); // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222}
-// console.log(movements);
+
+//Event handlers
+btnLogin.addEventListener('click', function () {
+  console.log('LOGIN');
+});
