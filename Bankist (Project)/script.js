@@ -208,7 +208,7 @@ const createUsername = function (accs) {
 createUsername(accounts);
 console.log(accounts);
 */
-
+/*
 const desposits = movements.filter(function (mov) {
   return mov > 0;
 });
@@ -223,3 +223,5 @@ console.log(depositsFor); // [200, 450, 3000, 70, 1300]
 
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals); // [-400, -650, -130]
+*/
+
