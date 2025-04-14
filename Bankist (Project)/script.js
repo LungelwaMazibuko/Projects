@@ -110,7 +110,7 @@ console.log([...arr,...arr2]); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 
 console.log(letters.join(' - ')); // 'a - b - c - d - e - j - i - h - g - f'
 
 */
-
+/*
 const arr = [23, 11, 64];
 console.log(arr[0]); // 23
 console.log(arr.at(0)); // 23
@@ -119,3 +119,24 @@ console.log(arr.at(0)); // 23
 console.log(arr[arr.length - 1]); // 64
 console.log(arr.slice(-1)[0]); // 64
 console.log(arr.at(-1)); // 64
+
+*/
+
+movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
+}
+
+console.log('---- FOREACH ----');
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdrew ${Math.abs(movement)}`);
+  }
+});
