@@ -242,4 +242,4 @@ console.log(balance2); // 3840
 const max = movements.reduce((acc, mov) => {
   if (mov > acc) return mov;
   else return acc;
-})
+}, movements[0]);
