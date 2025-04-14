@@ -224,7 +224,7 @@ console.log(depositsFor); // [200, 450, 3000, 70, 1300]
 const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals); // [-400, -650, -130]
 */
-
+/*
 console.log(movements);
 
 // accumulator -> SNOWBALL
@@ -236,5 +236,10 @@ for (const mov of movements) {
   balance2 += mov;
 }
 console.log(balance2); // 3840
+*/
 
-
+// Maximum value
+const max = movements.reduce((acc, mov) => {
+  if (mov > acc) return mov;
+  else return acc;
+})
