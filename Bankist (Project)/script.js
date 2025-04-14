@@ -194,3 +194,16 @@ const movementsDescriptions = movements.map((mov, i) => {
 console.log(movementsDescriptions);
 */
 
+const createUsername = function (accs) {
+  // Loop over each account
+  accs.forEach(function (acc) {
+    accs.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+
+createUsername(accounts);
+console.log(accounts);
