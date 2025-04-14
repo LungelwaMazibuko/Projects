@@ -225,3 +225,16 @@ const withdrawals = movements.filter(mov => mov < 0);
 console.log(withdrawals); // [-400, -650, -130]
 */
 
+console.log(movements);
+
+// accumulator -> SNOWBALL
+const balance = movements.reduce((acc, cur) => acc + cur, 0);
+console.log(balance); // 3840
+
+let balance2 = 0;
+for (const mov of movements) {
+  balance2 += mov;
+}
+console.log(balance2); // 3840
+
+
