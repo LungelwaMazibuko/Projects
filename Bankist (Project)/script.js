@@ -140,7 +140,7 @@ movements.forEach(function (mov, i, arr) {
   }
 });
 */
-
+/*
 currencies.forEach(function (value, key, map) {
   console.log(`${key}: ${value}`);
 });
@@ -151,3 +151,4 @@ console.log(currenciesUnique); // Set(3) {'USD', 'GBP', 'EUR'}
 currenciesUnique.forEach(function (value, _, map) {
   console.log(`${key}: ${value}`);
 });
+*/
