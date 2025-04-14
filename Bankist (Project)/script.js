@@ -288,6 +288,7 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account); // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222}
 
 //Event handlers
-btnLogin.addEventListener('click', function () {
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent form from submitting
   console.log('LOGIN');
 });
