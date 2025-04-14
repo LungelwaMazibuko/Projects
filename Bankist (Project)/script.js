@@ -100,3 +100,8 @@ console.log(arr2.reverse()); // ['f', 'g', 'h', 'i', 'j']
 console.log(arr2); // ['j', 'i', 'h', 'g', 'f']
 arr2 = ['j', 'i', 'h', 'g', 'f'];
 
+// CONCAT
+const letters = arr.concat(arr2);
+console.log(letters); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 'f']
+console.log([...arr,...arr2]); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 'f']
+
