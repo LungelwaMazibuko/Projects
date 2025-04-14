@@ -108,7 +108,7 @@ Each project directory contains all the necessary files for that specific websit
 
 If you have any questions or suggestions regarding these projects, feel free to contact me:
 
-- GitHub: [@yourusername](https://github.com/LungelwaMazibuko)
+- GitHub: [lungelwa-mazibuko](https://github.com/lungelwa-mazibuko)
 - Email: lungelwa.mazibuko.dev@gmail.com
 
 ---
