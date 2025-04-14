@@ -245,7 +245,7 @@ const max = movements.reduce((acc, mov) => {
 }, movements[0]);
 
 // PIPLINE
-const totalDepositsUSD = movenents
+const totalDepositsUSD = movements
   .filter(mov => mov > 0)
   .map(mov => mov * eurToUsd)
   .reduce((acc, mov) => acc + mov, 0);
@@ -278,3 +278,12 @@ const calcDisplaySummary = function (movements) {
   labelSumInterest.textContent = `${interest} EUR`;
 };
 calcDisplaySummary(account1.movements);
+
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(firstWithdrawal); // -400
+console.log(movements);
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account); // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222}
+// console.log(movements);
