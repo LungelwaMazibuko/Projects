@@ -75,16 +75,17 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
+/*
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // SLICE
-// console.log(arr.slice(2)); // ['c', 'd', 'e']
-// console.log(arr.slice(2, 4)); // ['c', 'd']
-// console.log(arr.slice(-2)); // ['d', 'e']
-// console.log(arr.slice(-1)); // ['e'] 
-// console.log(arr.slice(1, -2)); // ['b', 'c']
-// console.log(arr.slice()); // ['a', 'b', 'c', 'd', 'e']
-// console.log([...arr])
+console.log(arr.slice(2)); // ['c', 'd', 'e']
+console.log(arr.slice(2, 4)); // ['c', 'd']
+console.log(arr.slice(-2)); // ['d', 'e']
+console.log(arr.slice(-1)); // ['e'] 
+console.log(arr.slice(1, -2)); // ['b', 'c']
+console.log(arr.slice()); // ['a', 'b', 'c', 'd', 'e']
+console.log([...arr])
 
 // SPLICE
 arr.splice(2); 
@@ -107,3 +108,6 @@ console.log([...arr,...arr2]); // ['a', 'b', 'c', 'd', 'e', 'j', 'i', 'h', 'g', 
 
 // JOIN
 console.log(letters.join(' - ')); // 'a - b - c - d - e - j - i - h - g - f'
+
+*/
+
