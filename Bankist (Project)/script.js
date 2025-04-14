@@ -193,7 +193,7 @@ const movementsDescriptions = movements.map((mov, i) => {
 });
 console.log(movementsDescriptions);
 */
-
+/*
 const createUsername = function (accs) {
   // Loop over each account
   accs.forEach(function (acc) {
@@ -207,3 +207,5 @@ const createUsername = function (accs) {
 
 createUsername(accounts);
 console.log(accounts);
+*/
+
